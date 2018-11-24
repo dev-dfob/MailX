@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MailX - Email, Weather, News, Cats and other</title>
+    <link rel="stylesheet" href="~/Content/Site.css">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+</head>
+<body>
+    <nav class="navbar-container">
+        <div class="navbar-logo" onclick="window.location.replace('/')">
+            <img src="https://icongr.am/clarity/map.svg?size=60&color=ffffff" alt="logo" />
+            <div>MailX</div>
+        </div>
+        <div class="navbar-user">
+            <img src="https://icongram.jgog.in/material/account-circle.svg?color=ffffff&size=37"
+                 alt="auth_img" />
+            <a href="https://oauth.vk.com/authorize?client_id=6718768&redirect_uri=http://localhost:8080/api/auth/login&scope=4195332&display=popup">Sign in with VK</a>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
